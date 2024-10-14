@@ -8,10 +8,10 @@ trigger:
 
 variables:
   azureServiceConnectionId: 'az-conn'
-  webAppName: 'tanlx-ml-app'
+  webAppName: 'sklearn-app'
   vmImageName: 'Ubuntu-18.04'
   # Environment name
-  environmentName: 'tanlx-ml-app'
+  environmentName: 'sklearn-app'
   projectRoot: $(System.DefaultWorkingDirectory)/flask-sklearn
   
   # Python version: 3.7
