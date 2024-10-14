@@ -10,6 +10,8 @@ variables:
   azureServiceConnectionId: 'az-conn'
   webAppName: 'tanlx-ml-app'
   vmImageName: 'Ubuntu-18.04'
+  # Environment name
+  environmentName: 'tanlx-ml-app'
   projectRoot: $(System.DefaultWorkingDirectory)/flask-sklearn
   
   # Python version: 3.7
@@ -66,7 +68,7 @@ stages:
   - deployment: DeploymentJob
     pool:
       vmImage: $(vmImageName)
-    environment: 'tanlx-ml-app'
+    environment: $(environmentName)
     strategy:
       runOnce:
         deploy:
