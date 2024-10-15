@@ -7,13 +7,22 @@ trigger:
 - main
 
 variables:
-  azureServiceConnectionId: 'az-conn'
-  webAppName: 'tanlx-ml-app'
-  vmImageName: 'Ubuntu-18.04'
+  # Azure Resource Manager connection created during pipeline creation
+  azureServiceConnectionId: '4795e7e4-8580-4902-be6d-8f55dfa504c2'
+
+  # Web app name
+  webAppName: 'tanlx-sklearn-app'
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+  # Environment name
+  environmentName: 'tanlx-sklearn-app'
+
+  # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)/flask-sklearn
-  
-  # Python version: 3.7
-  pythonVersion: '3.10'
+
+  pythonVersion: '3.11'
 
 stages:
 - stage: Build
@@ -27,24 +36,16 @@ stages:
       inputs:
         versionSpec: '$(pythonVersion)'
       displayName: 'Use Python $(pythonVersion)'
-    
+
     - script: |
-        python -m venv venv
-        source venv/bin/activate
+        python -m venv antenv
+        source antenv/bin/activate
         python -m pip install --upgrade pip
         pip install setup
         pip install -r requirements.txt
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
-    
-    - script: |
-        python -m venv antenv
-        source antenv/bin/activate
-        make install
-        make lint
-      workingDirectory: $(projectRoot)
-      displayName: "Run Lint test"
-      
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -66,18 +67,19 @@ stages:
   - deployment: DeploymentJob
     pool:
       vmImage: $(vmImageName)
+    environment: $(environmentName)
     strategy:
       runOnce:
         deploy:
           steps:
-          
+
           - task: UsePythonVersion@0
             inputs:
               versionSpec: '$(pythonVersion)'
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : tanlx-ml-app'
+            displayName: 'Deploy Azure Web App : tanlx-sklearn-app'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
