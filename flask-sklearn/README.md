@@ -6,6 +6,7 @@ This Project is the Project #2 of the Udacity Azure Dev Ops Nanodegree to produc
 
 The project plan is very simple for this project and includes links to the Trello board so stalkholders and engineers can see the latest progess.
 Link to Trello: [Trello Board](https://trello.com/b/vWRorVRS/flask-sklearn)
+
 Here's a link to the Google Sheets Project plan.
 [Google Sheets Project Plan](https://docs.google.com/spreadsheets/d/1qOMtyX2V_MC1RCvzli48WhsdFDQfB0KgAXxGL2PGKnc/edit?usp=sharing)
 
