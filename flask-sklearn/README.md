@@ -11,9 +11,8 @@ Here's how to get the project running in the Azure Cloud shell. If you're runnin
 
 1. Clone the Github Repo onto your perferred device or if you would perfer you can fork this repo and then clone it to your device.
 
-2. Create a python Virtual Environment `python3 -m venv venv`* this will create a virtial environment for your python app so packages and modules are not system wide so you can run many python projects without worrying about conflicts. Please replace the `{project-name}` with the a name of your choosing **Note* depending on your device it may be python or python3 as the python keyword.
-
-3. Next you need to change directory to the repo name and then activate your neewly created enviroment like so
+2. Create a python Virtual Environment `python3 -m venv venv`* this will create a virtial environment for your python app so packages and modules are not system wide so you can run many python projects without worrying about conflicts.
+3. Activate your neewly created enviroment like so
 ```
 source ~/.venv/bin/activate
 ```
