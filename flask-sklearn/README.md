@@ -2,6 +2,13 @@
 
 This Project is the Project #2 of the Udacity Azure Dev Ops Nanodegree to product a CI and CD process to deploy a web app through Azure App Services. This project comes with a preconfigred Python Flask app to predict housing prices based on the provided dataset.
 
+# Project Plan
+
+The project plan is very simple for this project and includes links to the Trello board so stalkholders and engineers can see the latest progess.
+Link to Trello: [Trello Board](https://trello.com/b/vWRorVRS/flask-sklearn)
+Here's a link to the Google Sheets Project plan.
+[Google Sheets Project Plan](https://docs.google.com/spreadsheets/d/1qOMtyX2V_MC1RCvzli48WhsdFDQfB0KgAXxGL2PGKnc/edit?usp=sharing)
+
 # Instructions
 
 Architecture Diagram
