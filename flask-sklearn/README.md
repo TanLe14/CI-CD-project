@@ -18,6 +18,7 @@ Architecture Diagram
 Here's how to get the project running in the Azure Cloud shell. If you're running a linux based System such as Ubuntu or Mac OS then it should be very similar
 
 1. Clone the Github Repo onto your perferred device or if you would perfer you can fork this repo and then clone it to your device.
+![Clone source code from repo](../images/clone_source.png "Clone source code from repo")
 
 2. Create a python Virtual Environment `python3 -m venv venv`* this will create a virtial environment for your python app so packages and modules are not system wide so you can run many python projects without worrying about conflicts.
 3. Activate your neewly created enviroment like so
@@ -51,6 +52,8 @@ In this portion of the setup we will configure the Web Application in our Azure 
  ![Screenshot of make predict azure app](../images/make_predict_result.png "Make Predict Screenshot")
 
 7. If you would to check the logs of your application you can see them using this command should see something like this below. `az webapp log tail -g "{resource-group-name}" -n "{app-name}"`
+ ![Screenshot of azure app service](../images/command_create_webapp.png "Create app service with command")
+
 ```bash
 2021-01-30T22:02:44.432270007Z [2021-01-30 22:02:44,431] INFO in app: JSON payload: %s json_payload
 2021-01-30T22:02:44.445898799Z [2021-01-30 22:02:44,445] INFO in app: inference payload DataFrame: %s inference_payload
@@ -87,6 +90,8 @@ This will show you show to create a new project in Azure DevOps portal and hook 
 
  Here's an example of what a sucessfull Azure Pipeline looks like:\
   ![Screenshot of azure pipeline successful deploy webapp](../images/azure_pipeline.png "Screenshot of azure pipeline successful deploy webapp")
+5.
+![Screenshot of github action CI](../images/github.png "Screenshot of github action CI")
 
 ## Enhancements
 Here lies a short list of possible future improvements to this project
