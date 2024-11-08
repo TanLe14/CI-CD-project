@@ -90,7 +90,8 @@ This will show you show to create a new project in Azure DevOps portal and hook 
 
  Here's an example of what a sucessfull Azure Pipeline looks like:\
   ![Screenshot of azure pipeline successful deploy webapp](../images/azure_pipeline.png "Screenshot of azure pipeline successful deploy webapp")
-5.
+  
+5.Github action CI
 ![Screenshot of github action CI](../images/github.png "Screenshot of github action CI")
 
 ## Enhancements
